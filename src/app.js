@@ -11,8 +11,9 @@ app.disable('x-powered-by');
 
 // Configurar o CORS para permitir requisições do frontend
 app.use(cors({
-    origin: 'http://localhost:3000', // Permitir requisições vindas do frontend
+    origin: ['http://localhost:3000', 'https://ps-wine.vercel.app'], // Permitir requisições vindas do frontend
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos HTTP permitidos
+    credentials: true,
 }));
 
 // Configurar bodyParser
